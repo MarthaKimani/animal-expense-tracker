@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { animalTypes, healthStatuses } from '../data/DummyData';
+import { animalTypes, healthStatuses } from '../data/Data';
 
 const AddAnimal = () => {
   const navigate = useNavigate();

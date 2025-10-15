@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { financeCategories } from '../data/DummyData';
+import { financeCategories } from '../data/Data';
 
 const AddFinance = () => {
   const navigate = useNavigate();

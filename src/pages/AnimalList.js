@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { animalsData } from '../data/DummyData';
+import { animalsData } from '../data/Data';
 
 const AnimalList = () => {
   const [animals, setAnimals] = useState(animalsData);

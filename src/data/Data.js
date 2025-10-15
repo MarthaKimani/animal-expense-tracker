@@ -98,3 +98,15 @@ export const financeCategories = [
   { value: 'MAINTENANCE', label: 'Maintenance' },
   { value: 'OTHER', label: 'Other' }
 ];
+// Add to your existing Data.js file
+export const usersData = [
+  {
+    id: 1,
+    firstName: 'Demo',
+    lastName: 'User',
+    email: 'demo@farm.com',
+    password: 'password', // In real app, this should be hashed
+    farmName: 'Demo Farm',
+    createdAt: '2024-01-01'
+  }
+];

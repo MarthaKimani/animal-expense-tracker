@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { financesData } from '../data/DummyData';
+import { financesData } from '../data/Data';
 
 const FinanceList = () => {
   const [finances, setFinances] = useState(financesData);
