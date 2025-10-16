@@ -10,6 +10,15 @@ import FinanceList from './pages/FinanceList';
 import AddFinance from './pages/AddFinance';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import HealthTracking from './pages/HealthTracking';
+import FeedingGrowth from './pages/FeedingGrowth';
+import Tasks from './pages/Tasks';
+import Inventory from './pages/Inventory';
+import Analytics from './pages/Analytics';
+import Reports from './pages/Reports';
+import FarmMap from './pages/FarmMap';
+import MilkProduction from './pages/MilkProduction';
+import BreedingEnhanced from './pages/BreedingEnhanced';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -111,20 +120,62 @@ function App() {
                 <Navigate to="/login" replace />
               } 
             />
+             {/* New Feature Routes */}
+            <Route path="/health"
+             element={isAuthenticated ?
+              <HealthTracking /> :
+               <Navigate to="/login" replace />}
+                />
+            <Route path="/feeding" 
+            element={isAuthenticated ?
+             <FeedingGrowth /> : 
+             <Navigate to="/login" replace />}
+              />
+            <Route path="/milk-production"
+             element={isAuthenticated ?
+              <MilkProduction /> :
+               <Navigate to="/login" replace />}
+                />
+            <Route path="/tasks"
+             element={isAuthenticated ? 
+             <Tasks /> :
+             <Navigate to="/login" replace />}
+             />
+            <Route path="/inventory" 
+            element={isAuthenticated ?
+             <Inventory /> :
+              <Navigate to="/login" replace />}
+               />
+            <Route path="/analytics"
+             element={isAuthenticated ?
+              <Analytics /> : 
+              <Navigate to="/login" replace />} 
+              />
+            <Route path="/reports"
+             element={isAuthenticated ? 
+             <Reports /> :
+              <Navigate to="/login" replace />}
+               />
+            <Route path="/farm-map"
+             element={isAuthenticated ?
+              <FarmMap /> : 
+              <Navigate to="/login" replace />} 
+              />
+                <Route path="/breeding"
+             element={isAuthenticated ?
+              <BreedingEnhanced /> : 
+              <Navigate to="/login" replace />} 
+              />
             
             {/* Default Route */}
-            <Route 
-              path="/" 
-              element={
-                <Navigate to={isAuthenticated ? "/dashboard" : "/login"} replace />
-              } 
-            />
+            <Route path="/" element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} replace />} />
           </Routes>
         </div>
       </div>
     </Router>
   );
 }
+
 
 export default App;
 
@@ -246,5 +297,4 @@ export default App;
 //     </Router>
 //   );
 // } 
-
 // export default App;

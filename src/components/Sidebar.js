@@ -7,7 +7,16 @@ const Sidebar = ({ logout }) => {
   const menuItems = [
     { path: '/dashboard', label: 'Dashboard', icon: '📊' },
     { path: '/animals', label: 'Animals', icon: '🐄' },
-    { path: '/finances', label: 'Finances', icon: '💰' }
+    { path: '/finances', label: 'Finances', icon: '💰' },
+  { path: '/breeding', label: 'Breeding', icon: '❤️' },
+  { path: '/health', label: 'Health Tracking', icon: '🏥' },
+  { path: '/feeding', label: 'Feeding & Growth', icon: '🍽️' },
+  { path: '/milk-production', label: 'Milk Production', icon: '🥛' },
+  { path: '/tasks', label: 'Tasks & Reminders', icon: '📋' },
+  { path: '/inventory', label: 'Inventory', icon: '📦' },
+  { path: '/analytics', label: 'Analytics', icon: '📈' },
+  { path: '/reports', label: 'Reports', icon: '📊' },
+  { path: '/farm-map', label: 'Farm Map', icon: '🗺️' }
   ];
 
   const handleLogout = () => {
