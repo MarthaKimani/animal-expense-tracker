@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const FarmMap = () => {
-  const [farmLayout, setFarmLayout] = useState([
+  const [farmLayout] = useState([
     {
       id: 1,
       name: 'Main Barn',
