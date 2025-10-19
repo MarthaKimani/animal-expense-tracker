@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { animalsData, financesData } from '../data/Data';
-
+import html2canvas from "html2canvas";
 
 const Reports = () => {
   const [selectedPeriod, setSelectedPeriod] = useState('month');
