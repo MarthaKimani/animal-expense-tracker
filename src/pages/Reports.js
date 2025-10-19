@@ -133,11 +133,11 @@ const Reports = () => {
   }, [selectedPeriod, selectedDate, reportType]);
 
   // Export functions
-  const exportToPDF = () => {
-    const reportContent = document.getElementById('report-content');
-    alert('PDF export would generate a professional report with charts and tables');
-    // In production: Use libraries like jsPDF, html2pdf.js, or @react-pdf/renderer
-  };
+const exportToPDF = async () => {
+  const reportContent = document.getElementById('report-content');
+  const canvas = await html2canvas(reportContent);
+  // continue your PDF logic here...
+};
 
   const exportToExcel = () => {
     alert('Excel export would create a spreadsheet with all report data');
