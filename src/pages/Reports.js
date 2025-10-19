@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { animalsData, financesData } from '../data/Data';
-import html2canvas from "html2canvas";
+
 
 const Reports = () => {
   const [selectedPeriod, setSelectedPeriod] = useState('month');
@@ -136,9 +136,9 @@ const Reports = () => {
   // Export functions
 const exportToPDF = async () => {
   const reportContent = document.getElementById('report-content');
-  const canvas = await html2canvas(reportContent);
-  // continue your PDF logic here...
+  await html2canvas(reportContent);
 };
+
 
   const exportToExcel = () => {
     alert('Excel export would create a spreadsheet with all report data');
